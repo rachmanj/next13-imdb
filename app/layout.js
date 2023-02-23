@@ -1,6 +1,7 @@
-import './globals.css'
+import Header from "@/components/Header";
+import "./globals.css";
 
-export default function RootLayout({ children }) {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       {/*
@@ -8,7 +9,18 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        {/* header */}
+        <Header />
+
+        {/* navbar */}
+
+        {/* searchbox */}
+
+        {children}
+      </body>
     </html>
-  )
-}
+  );
+};
+
+export default RootLayout;
