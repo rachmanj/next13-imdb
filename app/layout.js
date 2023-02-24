@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
+import Providers from "./Providers";
 
 const RootLayout = ({ children }) => {
   return (
@@ -10,14 +12,17 @@ const RootLayout = ({ children }) => {
       */}
       <head />
       <body>
-        {/* header */}
-        <Header />
+        <Providers>
+          {/* header */}
+          <Header />
 
-        {/* navbar */}
+          {/* navbar */}
+          <Navbar />
 
-        {/* searchbox */}
+          {/* searchbox */}
 
-        {children}
+          {children}
+        </Providers>
       </body>
     </html>
   );
